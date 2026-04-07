@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet" />
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
 :root {
   --bg: #080c12;
   --surface: #0f1623;
@@ -31,7 +31,7 @@
   --radius: 8px;
   --radius-sm: 5px;
 }
-
+ 
 body {
   font-family: 'IBM Plex Sans', sans-serif;
   background: var(--bg);
@@ -41,7 +41,7 @@ body {
   position: relative;
   overflow-x: hidden;
 }
-
+ 
 body::before {
   content: '';
   position: fixed;
@@ -54,7 +54,7 @@ body::before {
   pointer-events: none;
   z-index: 0;
 }
-
+ 
 .grid-bg {
   position: fixed;
   inset: 0;
@@ -65,7 +65,7 @@ body::before {
   pointer-events: none;
   z-index: 0;
 }
-
+ 
 .topbar {
   background: rgba(8,12,18,0.92);
   border-bottom: 1px solid var(--border);
@@ -78,26 +78,26 @@ body::before {
   z-index: 10;
   backdrop-filter: blur(8px);
 }
-
+ 
 .logo-wrap {
   display: flex;
   align-items: center;
   gap: 14px;
 }
-
+ 
 .logo-img {
   height: 28px;
   width: auto;
   filter: brightness(0) invert(1);
   opacity: 0.92;
 }
-
+ 
 .logo-divider {
   width: 1px;
   height: 22px;
   background: var(--border-mid);
 }
-
+ 
 .logo-label {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 11px;
@@ -105,13 +105,13 @@ body::before {
   text-transform: uppercase;
   color: var(--text-soft);
 }
-
+ 
 .topbar-right {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-
+ 
 .live-dot {
   width: 6px;
   height: 6px;
@@ -120,7 +120,7 @@ body::before {
   box-shadow: 0 0 8px var(--green);
   animation: blink 2s infinite;
 }
-
+ 
 .live-label {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 10px;
@@ -128,12 +128,12 @@ body::before {
   text-transform: uppercase;
   color: var(--green);
 }
-
+ 
 @keyframes blink {
   0%,100% { opacity:1; }
   50% { opacity:0.3; }
 }
-
+ 
 .page {
   max-width: 800px;
   margin: 0 auto;
@@ -141,25 +141,25 @@ body::before {
   position: relative;
   z-index: 1;
 }
-
+ 
 header {
   margin-bottom: 2.25rem;
   animation: fadeUp 0.6s ease both;
 }
-
+ 
 .header-top {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 1rem;
 }
-
+ 
 .header-line {
   flex: 1;
   height: 1px;
   background: linear-gradient(90deg, var(--border-mid), transparent);
 }
-
+ 
 .eyebrow {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 10px;
@@ -168,7 +168,7 @@ header {
   color: var(--cyan);
   white-space: nowrap;
 }
-
+ 
 h1 {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 30px;
@@ -177,16 +177,16 @@ h1 {
   letter-spacing: -0.02em;
   margin-bottom: 6px;
 }
-
+ 
 h1 span { color: var(--cyan); }
-
+ 
 .subtitle {
   font-size: 12px;
   color: var(--text-soft);
   font-family: 'IBM Plex Mono', monospace;
   letter-spacing: 0.04em;
 }
-
+ 
 .stats {
   display: grid;
   grid-template-columns: repeat(3, minmax(0,1fr));
@@ -194,7 +194,7 @@ h1 span { color: var(--cyan); }
   margin-bottom: 2rem;
   animation: fadeUp 0.6s 0.08s ease both;
 }
-
+ 
 .stat-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -204,7 +204,7 @@ h1 span { color: var(--cyan); }
   overflow: hidden;
   transition: border-color 0.2s;
 }
-
+ 
 .stat-card::after {
   content: '';
   position: absolute;
@@ -213,9 +213,9 @@ h1 span { color: var(--cyan); }
   background: linear-gradient(90deg, transparent, var(--cyan), transparent);
   opacity: 0.35;
 }
-
+ 
 .stat-card:hover { border-color: var(--border-mid); }
-
+ 
 .stat-label {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 9px;
@@ -224,7 +224,7 @@ h1 span { color: var(--cyan); }
   color: var(--text-soft);
   margin-bottom: 8px;
 }
-
+ 
 .stat-value {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 28px;
@@ -232,7 +232,7 @@ h1 span { color: var(--cyan); }
   color: var(--cyan);
   line-height: 1;
 }
-
+ 
 .stat-value.name {
   font-size: 13px;
   font-weight: 500;
@@ -240,7 +240,7 @@ h1 span { color: var(--cyan); }
   color: var(--text);
   line-height: 1.4;
 }
-
+ 
 .controls {
   display: flex;
   gap: 10px;
@@ -248,13 +248,13 @@ h1 span { color: var(--cyan); }
   flex-wrap: wrap;
   animation: fadeUp 0.6s 0.14s ease both;
 }
-
+ 
 .search-wrap {
   flex: 1;
   min-width: 180px;
   position: relative;
 }
-
+ 
 .search-icon {
   position: absolute;
   left: 12px;
@@ -263,7 +263,7 @@ h1 span { color: var(--cyan); }
   color: var(--text-soft);
   pointer-events: none;
 }
-
+ 
 input[type="text"] {
   width: 100%;
   height: 38px;
@@ -278,16 +278,16 @@ input[type="text"] {
   transition: border-color 0.2s, box-shadow 0.2s;
   letter-spacing: 0.02em;
 }
-
+ 
 input[type="text"]:focus {
   border-color: var(--cyan);
   box-shadow: 0 0 0 3px rgba(56,189,248,0.08);
 }
-
+ 
 input[type="text"]::placeholder { color: var(--text-soft); }
-
+ 
 .filters { display: flex; gap: 6px; flex-wrap: wrap; }
-
+ 
 .filter-btn {
   height: 38px;
   padding: 0 14px;
@@ -303,10 +303,10 @@ input[type="text"]::placeholder { color: var(--text-soft); }
   transition: all 0.15s;
   white-space: nowrap;
 }
-
+ 
 .filter-btn:hover { border-color: var(--border-bright); color: var(--text); }
 .filter-btn.active { background: var(--cyan-dim); border-color: var(--cyan); color: var(--cyan); }
-
+ 
 .section-label {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 9px;
@@ -320,16 +320,16 @@ input[type="text"]::placeholder { color: var(--text-soft); }
   align-items: center;
   gap: 8px;
 }
-
+ 
 .section-label::after {
   content: '';
   flex: 1;
   height: 1px;
   background: linear-gradient(90deg, var(--border), transparent);
 }
-
+ 
 .list { display: flex; flex-direction: column; gap: 6px; }
-
+ 
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -343,7 +343,7 @@ input[type="text"]::placeholder { color: var(--text-soft); }
   position: relative;
   overflow: hidden;
 }
-
+ 
 .card::before {
   content: '';
   position: absolute;
@@ -352,14 +352,14 @@ input[type="text"]::placeholder { color: var(--text-soft); }
   background: var(--border);
   transition: background 0.2s, box-shadow 0.2s;
 }
-
+ 
 .card:hover { border-color: var(--border-mid); background: var(--surface2); transform: translateX(3px); }
 .card:hover::before { background: var(--cyan); }
-
+ 
 .card.is-current { border-color: rgba(56,189,248,0.35); background: var(--surface2); }
 .card.is-current::before { background: var(--cyan); box-shadow: 0 0 10px rgba(56,189,248,0.6); }
 .card.is-loa, .card.is-covered { opacity: 0.5; }
-
+ 
 .avatar {
   width: 40px;
   height: 40px;
@@ -374,9 +374,9 @@ input[type="text"]::placeholder { color: var(--text-soft); }
   letter-spacing: 0.05em;
   border: 1px solid;
 }
-
+ 
 .card-body { flex: 1; min-width: 0; }
-
+ 
 .card-name {
   font-size: 14px;
   font-weight: 500;
@@ -386,14 +386,14 @@ input[type="text"]::placeholder { color: var(--text-soft); }
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
+ 
 .card-dates {
   font-size: 12px;
   color: var(--text-mid);
   font-family: 'IBM Plex Mono', monospace;
   letter-spacing: 0.03em;
 }
-
+ 
 .card-right {
   display: flex;
   flex-direction: column;
@@ -401,7 +401,7 @@ input[type="text"]::placeholder { color: var(--text-soft); }
   gap: 5px;
   flex-shrink: 0;
 }
-
+ 
 .badge {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 10px;
@@ -413,20 +413,20 @@ input[type="text"]::placeholder { color: var(--text-soft); }
   text-transform: uppercase;
   border: 1px solid;
 }
-
+ 
 .badge-current  { background: var(--cyan-dim);  color: var(--cyan);  border-color: rgba(56,189,248,0.3); }
 .badge-upcoming { background: var(--surface3);  color: var(--text-mid); border-color: var(--border); }
 .badge-past     { background: transparent;      color: var(--text-soft); border-color: var(--border); }
 .badge-loa      { background: var(--amber-dim); color: var(--amber); border-color: rgba(251,191,36,0.3); }
 .badge-covered  { background: var(--green-dim); color: var(--green); border-color: rgba(52,211,153,0.3); }
-
+ 
 .week-str {
   font-size: 10px;
   color: var(--text-soft);
   font-family: 'IBM Plex Mono', monospace;
   letter-spacing: 0.04em;
 }
-
+ 
 .empty {
   text-align: center;
   padding: 3rem;
@@ -437,7 +437,7 @@ input[type="text"]::placeholder { color: var(--text-soft); }
   border: 1px solid var(--border);
   border-radius: var(--radius);
 }
-
+ 
 .footer {
   text-align: center;
   margin-top: 3rem;
@@ -450,15 +450,15 @@ input[type="text"]::placeholder { color: var(--text-soft); }
   justify-content: center;
   gap: 12px;
 }
-
+ 
 .footer-line { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--border-mid)); }
 .footer-line.r { background: linear-gradient(270deg, transparent, var(--border-mid)); }
-
+ 
 @keyframes fadeUp {
   from { opacity:0; transform:translateY(8px); }
   to   { opacity:1; transform:translateY(0); }
 }
-
+ 
 @media (max-width: 560px) {
   h1 { font-size: 22px; }
   .stats { grid-template-columns: repeat(2, minmax(0,1fr)); }
@@ -471,7 +471,7 @@ input[type="text"]::placeholder { color: var(--text-soft); }
 </head>
 <body>
 <div class="grid-bg"></div>
-
+ 
 <div class="topbar">
   <div class="logo-wrap">
     <img class="logo-img" src="data:image/webp;base64,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" alt="Integris" />
@@ -483,9 +483,9 @@ input[type="text"]::placeholder { color: var(--text-soft); }
     <span class="live-label">Live</span>
   </div>
 </div>
-
+ 
 <div class="page">
-
+ 
   <header>
     <div class="header-top">
       <span class="eyebrow">After Hours Rotation · 2026</span>
@@ -494,7 +494,7 @@ input[type="text"]::placeholder { color: var(--text-soft); }
     <h1>On-Call <span>Schedule_</span></h1>
     <p class="subtitle">// weekly assignments · status auto-updates on load</p>
   </header>
-
+ 
   <div class="stats">
     <div class="stat-card">
       <p class="stat-label">// total_weeks</p>
@@ -509,7 +509,7 @@ input[type="text"]::placeholder { color: var(--text-soft); }
       <p class="stat-value name" id="stat-next">—</p>
     </div>
   </div>
-
+ 
   <div class="controls">
     <div class="search-wrap">
       <svg class="search-icon" width="14" height="14" viewBox="0 0 15 15" fill="none">
@@ -525,15 +525,15 @@ input[type="text"]::placeholder { color: var(--text-soft); }
       <button class="filter-btn" onclick="setFilter('past',this)">Past</button>
     </div>
   </div>
-
+ 
   <div id="list" class="list"></div>
-
+ 
   <div class="footer">
     <div class="footer-line"></div>
     <span id="footer-text"></span>
     <div class="footer-line r"></div>
   </div>
-
+ 
 </div>
 <script>
 const COLORS = [
@@ -545,10 +545,10 @@ const COLORS = [
   { bg:'rgba(96,165,250,0.1)',  text:'#60a5fa', border:'rgba(96,165,250,0.28)' },
   { bg:'rgba(244,114,182,0.1)', text:'#f472b6', border:'rgba(244,114,182,0.28)' },
 ];
-
+ 
 const rotation = [
-  { name: 'Michael Yaacoub',    start: '2026-04-06', end: '2026-04-12', note: null },
-  { name: 'Hussein Alqurayni', start: '2026-04-13', end: '2026-04-19', note: null },
+  { name: 'Hussein Alqurayni', start: '2026-04-06', end: '2026-04-12', note: null },
+  { name: 'Michael Yaacoub',    start: '2026-04-13', end: '2026-04-19', note: null },
   { name: 'Carson Lewis',       start: '2026-04-20', end: '2026-04-26', note: null },
   { name: 'Zain Ashraf',        start: '2026-04-27', end: '2026-05-03', note: null },
   { name: 'Edwin Chavez',       start: '2026-05-04', end: '2026-05-10', note: null },
@@ -569,28 +569,28 @@ const rotation = [
   { name: 'Jon Soucy',          start: null, end: null, note: 'covered' },
   { name: 'Jordan Ridenhouse',  start: null, end: null, note: 'loa' },
 ];
-
+ 
 function parseD(s) {
   if (!s) return null;
   const [y,m,d] = s.split('-').map(Number);
   return new Date(y,m-1,d);
 }
-
+ 
 function fmtDate(s) {
   if (!s) return '';
   return parseD(s).toLocaleDateString('en-US',{month:'short',day:'numeric'});
 }
-
+ 
 function avatarColor(name) {
   let h = 0;
   for (const c of name) h = (h*31 + c.charCodeAt(0)) & 0xffff;
   return COLORS[h % COLORS.length];
 }
-
+ 
 function initials(name) {
   return name.split(' ').map(p=>p[0]).join('').slice(0,2).toUpperCase();
 }
-
+ 
 function getStatus(r) {
   if (r.note === 'loa') return 'loa';
   if (r.note === 'covered') return 'covered';
@@ -600,16 +600,16 @@ function getStatus(r) {
   if (s > today) return 'upcoming';
   return 'past';
 }
-
+ 
 let activeFilter = 'all';
-
+ 
 function setFilter(f, el) {
   activeFilter = f;
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   el.classList.add('active');
   render();
 }
-
+ 
 function cardHTML(r, delay) {
   const status = getStatus(r);
   const col = avatarColor(r.name);
@@ -638,7 +638,7 @@ function cardHTML(r, delay) {
     </div>
   </div>`;
 }
-
+ 
 function render() {
   const q = document.getElementById('search').value.toLowerCase();
   const listEl = document.getElementById('list');
@@ -665,7 +665,7 @@ function render() {
   }
   listEl.innerHTML = html;
 }
-
+ 
 function initStats() {
   const today = new Date(); today.setHours(0,0,0,0);
   const scheduled = rotation.filter(r => r.start && r.end);
@@ -678,7 +678,7 @@ function initStats() {
   document.getElementById('footer-text').textContent =
     `sys.loaded · ${now.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})} · ${now.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'})}`;
 }
-
+ 
 initStats();
 render();
 </script>
