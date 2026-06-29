@@ -92,12 +92,12 @@ input[type="text"]::placeholder { color: var(--text-soft); }
 .filter-btn { height: 38px; padding: 0 14px; border: 1px solid var(--border-mid); border-radius: var(--radius-sm); background: var(--surface); font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-mid); cursor: pointer; transition: all 0.15s; white-space: nowrap; }
 .filter-btn:hover { border-color: var(--border-bright); color: var(--text); }
 .filter-btn.active { background: var(--cyan-dim); border-color: var(--cyan); color: var(--cyan); }
- 
+
 .two-col { display: grid; grid-template-columns: 320px 1fr; gap: 20px; align-items: start; }
- 
+
 .panel-label { font-family: 'IBM Plex Mono', monospace; font-size: 9px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-soft); margin-bottom: 0.75rem; padding-bottom: 8px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
 .panel-label::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--border), transparent); }
- 
+
 .history-panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; animation: fadeUp 0.5s 0.1s ease both; }
 .history-panel-header { padding: 0.875rem 1rem; border-bottom: 1px solid var(--border); }
 .history-panel-header p { font-family: 'IBM Plex Mono', monospace; font-size: 9px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-soft); }
@@ -109,7 +109,7 @@ input[type="text"]::placeholder { color: var(--text-soft); }
 .hist-name { color: var(--text); font-weight: 500; white-space: nowrap; font-size: 13px; }
 .hist-dates { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--text-soft); white-space: nowrap; }
 .hist-avatar { width: 26px; height: 26px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 9px; font-weight: 600; border: 1px solid; flex-shrink: 0; }
- 
+
 .section-label { font-family: 'IBM Plex Mono', monospace; font-size: 9px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-soft); margin: 1.25rem 0 0.75rem; padding-bottom: 8px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
 .section-label::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--border), transparent); }
 .list { display: flex; flex-direction: column; gap: 6px; }
@@ -160,7 +160,7 @@ input[type="text"]::placeholder { color: var(--text-soft); }
     <span class="live-label">Live</span>
   </div>
 </div>
- 
+
 <div class="page">
   <header>
     <div class="header-top">
@@ -170,7 +170,7 @@ input[type="text"]::placeholder { color: var(--text-soft); }
     <h1>On-Call <span>Schedule_</span></h1>
     <p class="subtitle">// weekly assignments · status auto-updates on load</p>
   </header>
- 
+
   <div class="stats">
     <div class="stat-card">
       <p class="stat-label">// total_weeks</p>
@@ -185,7 +185,7 @@ input[type="text"]::placeholder { color: var(--text-soft); }
       <p class="stat-value name" id="stat-next">—</p>
     </div>
   </div>
- 
+
   <div class="controls">
     <div class="search-wrap">
       <svg class="search-icon" width="14" height="14" viewBox="0 0 15 15" fill="none">
@@ -200,7 +200,7 @@ input[type="text"]::placeholder { color: var(--text-soft); }
       <button class="filter-btn" onclick="setFilter('upcoming',this)">Upcoming</button>
     </div>
   </div>
- 
+
   <div class="two-col">
     <div>
       <div class="panel-label">// shift history</div>
@@ -222,14 +222,14 @@ input[type="text"]::placeholder { color: var(--text-soft); }
       <div id="list" class="list"></div>
     </div>
   </div>
- 
+
   <div class="footer">
     <div class="footer-line"></div>
     <span id="footer-text"></span>
     <div class="footer-line r"></div>
   </div>
 </div>
- 
+
 <script>
 const COLORS = [
   { bg:'rgba(56,189,248,0.1)',  text:'#38bdf8', border:'rgba(56,189,248,0.28)' },
@@ -240,7 +240,7 @@ const COLORS = [
   { bg:'rgba(96,165,250,0.1)',  text:'#60a5fa', border:'rgba(96,165,250,0.28)' },
   { bg:'rgba(244,114,182,0.1)', text:'#f472b6', border:'rgba(244,114,182,0.28)' },
 ];
- 
+
 const rotation = [
   { name: 'Hussein Alqurayni', start: '2026-04-06', end: '2026-04-12', note: null },
   { name: 'Michael Yaacoub',   start: '2026-04-13', end: '2026-04-19', note: null },
@@ -258,13 +258,13 @@ const rotation = [
   { name: 'Ramesh Berry',      start: '2026-07-06', end: '2026-07-12', note: null },
   { name: 'Nathan Cruz',       start: '2026-07-13', end: '2026-07-19', note: null },
   { name: 'Brittany Dillard',  start: '2026-07-20', end: '2026-07-26', note: null },
-  { name: 'Waseem Azizi',      start: '2026-07-27', end: '2026-08-02', note: null },
-  { name: 'Kevin Pomboza',     start: '2026-08-03', end: '2026-08-09', note: null },
+  { name: 'Kevin Pomboza',     start: '2026-07-27', end: '2026-08-02', note: null },
+  { name: 'Waseem Azizi',      start: '2026-08-03', end: '2026-08-09', note: null },
   { name: 'Mohamad Shaikh',    start: '2026-08-10', end: '2026-08-16', note: null },
   { name: 'Jon Soucy',         start: null, end: null, note: 'covered' },
   { name: 'Jordan Ridenhouse', start: null, end: null, note: 'loa' },
 ];
- 
+
 function parseD(s) {
   if (!s) return null;
   const [y,m,d] = s.split('-').map(Number);
@@ -291,7 +291,7 @@ function getStatus(r) {
   if (s > today) return 'upcoming';
   return 'past';
 }
- 
+
 let activeFilter = 'all';
 function setFilter(f, el) {
   activeFilter = f;
@@ -299,13 +299,13 @@ function setFilter(f, el) {
   el.classList.add('active');
   render();
 }
- 
+
 function renderHistory() {
   const today = new Date(); today.setHours(0,0,0,0);
   const past = rotation
     .filter(r => r.start && r.end && parseD(r.end) < today)
     .sort((a,b) => parseD(b.start) - parseD(a.start));
- 
+
   const tbody = document.getElementById('hist-body');
   if (!past.length) {
     tbody.innerHTML = `<tr><td colspan="3" style="text-align:center;padding:1.5rem;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--text-soft);">// no past shifts yet</td></tr>`;
@@ -323,7 +323,7 @@ function renderHistory() {
     </tr>`;
   }).join('');
 }
- 
+
 function cardHTML(r, delay) {
   const status = getStatus(r);
   const col = avatarColor(r.name);
@@ -348,12 +348,12 @@ function cardHTML(r, delay) {
     </div>
   </div>`;
 }
- 
+
 function render() {
   const q = document.getElementById('search').value.toLowerCase();
   const listEl = document.getElementById('list');
   const today = new Date(); today.setHours(0,0,0,0);
- 
+
   let items = rotation.filter(r => {
     if (!r.name.toLowerCase().includes(q)) return false;
     const s = getStatus(r);
@@ -361,15 +361,15 @@ function render() {
     if (activeFilter === 'upcoming') return s === 'upcoming';
     return s === 'current' || s === 'upcoming' || s === 'loa' || s === 'covered';
   });
- 
+
   if (!items.length) { listEl.innerHTML = '<div class="empty">// no_results_found</div>'; return; }
- 
+
   const groups = { current:[], upcoming:[], loa:[], covered:[] };
   items.forEach(r => {
     const s = getStatus(r);
     if (groups[s]) groups[s].push(r);
   });
- 
+
   let html = '', delay = 0;
   function section(label, arr) {
     if (!arr.length) return;
@@ -380,10 +380,10 @@ function render() {
   section('// upcoming', groups.upcoming);
   const special = [...groups.loa, ...groups.covered];
   if (special.length) section('// special_status', special);
- 
+
   listEl.innerHTML = html;
 }
- 
+
 function initStats() {
   const today = new Date(); today.setHours(0,0,0,0);
   const scheduled = rotation.filter(r => r.start && r.end);
@@ -396,7 +396,7 @@ function initStats() {
   document.getElementById('footer-text').textContent =
     `sys.loaded · ${now.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})} · ${now.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'})}`;
 }
- 
+
 initStats();
 renderHistory();
 render();
